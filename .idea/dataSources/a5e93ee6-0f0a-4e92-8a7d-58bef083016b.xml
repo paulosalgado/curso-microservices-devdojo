@@ -139,8 +139,8 @@ search_path=pg_catalog, public</Config>
       <ObjectId>2200</ObjectId>
       <Comment>standard public schema</Comment>
       <Owner>paulosalgado</Owner>
-      <IntrospectionTimestamp>2019-04-26.14:41:58.045</IntrospectionTimestamp>
-      <IntrospectionStateNumber>639</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2019-04-26.17:38:11.707</IntrospectionTimestamp>
+      <IntrospectionStateNumber>674</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -186,7 +186,16 @@ search_path=pg_catalog, public</Config>
       <HandlerId>335</HandlerId>
       <Type>index</Type>
     </access-method>
-    <sequence id="31" parent="24" name="course_id_seq">
+    <sequence id="31" parent="24" name="application_user_id_seq">
+      <ObjectId>16423</ObjectId>
+      <Owner>devdojo_usr</Owner>
+      <StateNumber>674</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="32" parent="24" name="course_id_seq">
       <ObjectId>16415</ObjectId>
       <Owner>devdojo_usr</Owner>
       <StateNumber>639</StateNumber>
@@ -195,12 +204,58 @@ search_path=pg_catalog, public</Config>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <table id="32" parent="24" name="course">
+    <table id="33" parent="24" name="application_user">
+      <ObjectId>16425</ObjectId>
+      <Owner>devdojo_usr</Owner>
+      <StateNumber>674</StateNumber>
+    </table>
+    <table id="34" parent="24" name="course">
       <ObjectId>16417</ObjectId>
       <Owner>devdojo_usr</Owner>
       <StateNumber>639</StateNumber>
     </table>
-    <column id="33" parent="32" name="id">
+    <column id="35" parent="33" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>674</StateNumber>
+      <DefaultExpression>nextval(&apos;application_user_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>application_user_id_seq</SequenceName>
+    </column>
+    <column id="36" parent="33" name="password">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>674</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="37" parent="33" name="role">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>674</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="38" parent="33" name="username">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>674</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="39" parent="33" name="application_user_pkey">
+      <ObjectId>16432</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="40" parent="33" name="application_user_pkey">
+      <ObjectId>16433</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>application_user_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="41" parent="34" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -209,19 +264,19 @@ search_path=pg_catalog, public</Config>
       <TypeId>20</TypeId>
       <SequenceName>course_id_seq</SequenceName>
     </column>
-    <column id="34" parent="32" name="title">
+    <column id="42" parent="34" name="title">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>639</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="35" parent="32" name="course_pkey">
+    <index id="43" parent="34" name="course_pkey">
       <ObjectId>16421</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="36" parent="32" name="course_pkey">
+    <key id="44" parent="34" name="course_pkey">
       <ObjectId>16422</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>course_pkey</UnderlyingIndexName>
