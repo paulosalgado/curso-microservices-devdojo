@@ -1,0 +1,23 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /gateway
+
+spring:
+  application:
+    name: gateway
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8082/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+
+zuul:
+  sensitive-headers: Cookie
+
+ribbon:
+  ReadTimeout: 5000

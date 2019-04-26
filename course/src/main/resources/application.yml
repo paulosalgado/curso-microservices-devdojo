@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8083
 
 spring:
   application:
@@ -10,10 +10,19 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect
   jmx:
     enabled: false
   datasource:
-    url: jdbc:mysql://localhost:3306/devdojo?allowPublicKeyRetrieval=true&sslMode=DISABLED
-    username: root
-    password: devdojo
+    url: jdbc:postgresql://${postgres-url}:5432/devdojo
+    username: devdojo_usr
+    password: ${postgres-passwd}
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8082/eureka/
+    fetch-registry: true
+    register-with-eureka: true
