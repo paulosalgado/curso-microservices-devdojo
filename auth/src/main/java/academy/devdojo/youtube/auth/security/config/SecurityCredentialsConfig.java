@@ -23,13 +23,20 @@ public class SecurityCredentialsConfig extends SecurityTokenConfig {
     private final TokenConverter tokenConverter;
 
     public SecurityCredentialsConfig(JwtConfiguration jwtConfiguration,
-            @Qualifier("userDetailsServiceImpl") UserDetailsService userDetailsService,
-            TokenCreator tokenCreator, TokenConverter tokenConverter) {
+                                     @Qualifier("userDetailsServiceImpl") UserDetailsService userDetailsService,
+                                     TokenCreator tokenCreator,
+                                     TokenConverter tokenConverter) {
 
         super(jwtConfiguration);
+
         this.userDetailsService = userDetailsService;
         this.tokenCreator = tokenCreator;
         this.tokenConverter = tokenConverter;
+    }
+
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 
     @Override
@@ -47,11 +54,6 @@ public class SecurityCredentialsConfig extends SecurityTokenConfig {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
-    }
-
-    @Bean
-    public BCryptPasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
     }
 
 }

@@ -28,7 +28,8 @@ public class JwtTokenAuthorizationFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(@NonNull HttpServletRequest request,
-            @NonNull HttpServletResponse response, @NonNull FilterChain chain) throws IOException, ServletException {
+                                    @NonNull HttpServletResponse response,
+                                    @NonNull FilterChain chain) throws IOException, ServletException {
 
         JwtConfiguration.Header configurationHeader = jwtConfiguration.getHeader();
 

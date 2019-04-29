@@ -5,19 +5,19 @@ import lombok.*;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
-@Entity
-@Getter
-@Setter
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Setter
+@Getter
+@Entity
 public class Course implements AbstractEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
     private Long id;
 
     @NotNull(message = "The field 'title' is mandatory")

@@ -16,9 +16,9 @@ import java.util.Collection;
 
 import static org.springframework.security.core.authority.AuthorityUtils.commaSeparatedStringToAuthorityList;
 
+@Slf4j
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 @Service
-@Slf4j
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     private final ApplicationUserRepository applicationUserRepository;

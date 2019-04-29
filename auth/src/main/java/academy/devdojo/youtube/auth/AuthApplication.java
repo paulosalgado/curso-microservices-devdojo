@@ -9,12 +9,12 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@SpringBootApplication
-@EnableConfigurationProperties(value = JwtConfiguration.class)
-@EntityScan({"academy.devdojo.youtube.core.model"})
 @EnableJpaRepositories({"academy.devdojo.youtube.core.repository"})
-@EnableEurekaClient
+@EntityScan({"academy.devdojo.youtube.core.model"})
 @ComponentScan("academy.devdojo.youtube")
+@EnableConfigurationProperties(value = JwtConfiguration.class)
+@EnableEurekaClient
+@SpringBootApplication
 public class AuthApplication {
 
     public static void main(String[] args) {

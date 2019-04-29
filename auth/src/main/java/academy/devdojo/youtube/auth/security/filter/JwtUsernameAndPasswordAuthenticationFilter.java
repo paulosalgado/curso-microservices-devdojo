@@ -20,17 +20,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Collections;
 
-@RequiredArgsConstructor(onConstructor = @__(@Autowired))
 @Slf4j
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class JwtUsernameAndPasswordAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
     private final AuthenticationManager authenticationManager;
     private final JwtConfiguration jwtConfiguration;
     private final TokenCreator tokenCreator;
 
-    @Override
     @SneakyThrows
-    public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) {
+    @Override
+    public Authentication attemptAuthentication(HttpServletRequest request,
+                                                HttpServletResponse response) {
 
         log.info("Attempting authentication...");
 
@@ -50,9 +51,12 @@ public class JwtUsernameAndPasswordAuthenticationFilter extends UsernamePassword
         return authenticationManager.authenticate(usernamePasswordAuthenticationToken);
     }
 
-    @Override
     @SneakyThrows
-    protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication auth) {
+    @Override
+    protected void successfulAuthentication(HttpServletRequest request,
+                                            HttpServletResponse response,
+                                            FilterChain chain,
+                                            Authentication auth) {
 
         log.info("Authentication was successfull for the user '{}', generating JWE token", auth.getName());
 

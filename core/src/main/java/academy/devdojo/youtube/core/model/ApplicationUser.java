@@ -8,20 +8,20 @@ import javax.validation.constraints.NotNull;
 
 import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
 
-@Entity
-@Getter
-@Setter
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @JsonInclude(NON_NULL)
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@Setter
+@Getter
+@Entity
 public class ApplicationUser implements AbstractEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
     private Long id;
 
     @NotNull(message = "The field 'username' is mandatory")
@@ -33,9 +33,9 @@ public class ApplicationUser implements AbstractEntity {
     @Column(nullable = false)
     private String password;
 
+    @Builder.Default
     @NotNull(message = "The field 'role' is mandatory")
     @Column(nullable = false)
-    @Builder.Default
     private String role = "USER";
 
     public ApplicationUser(@NotNull ApplicationUser applicationUser) {

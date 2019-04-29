@@ -7,11 +7,11 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.NestedConfigurationProperty;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
-@ConfigurationProperties(prefix = "jwt.config")
-@Getter
-@Setter
 @ToString
+@Setter
+@Getter
+@ConfigurationProperties(prefix = "jwt.config")
+@Configuration
 public class JwtConfiguration {
 
     private String loginUrl = "/login/**";
@@ -23,8 +23,8 @@ public class JwtConfiguration {
     private String privateKey = "EE6JZyj4RBqHx1Bb6fdRP1vkZNrGDCYb";
     private String type = "encrypted";
 
-    @Getter
     @Setter
+    @Getter
     public static class Header {
         private String name = "Authorization";
         private String prefix = "Bearer ";

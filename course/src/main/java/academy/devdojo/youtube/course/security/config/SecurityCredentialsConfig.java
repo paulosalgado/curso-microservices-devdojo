@@ -13,8 +13,11 @@ public class SecurityCredentialsConfig extends SecurityTokenConfig {
 
     private final TokenConverter tokenConverter;
 
-    public SecurityCredentialsConfig(JwtConfiguration jwtConfiguration, TokenConverter tokenConverter) {
+    public SecurityCredentialsConfig(JwtConfiguration jwtConfiguration,
+                                     TokenConverter tokenConverter) {
+
         super(jwtConfiguration);
+
         this.tokenConverter = tokenConverter;
     }
 

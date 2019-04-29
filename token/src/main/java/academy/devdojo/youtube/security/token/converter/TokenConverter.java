@@ -14,8 +14,8 @@ import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
 
 @Slf4j
-@Service
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
+@Service
 public class TokenConverter {
 
     private final JwtConfiguration jwtConfiguration;

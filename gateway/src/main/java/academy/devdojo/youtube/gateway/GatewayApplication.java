@@ -8,11 +8,11 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication
+@ComponentScan("academy.devdojo.youtube")
+@EnableConfigurationProperties(value = JwtConfiguration.class)
 @EnableZuulProxy
 @EnableEurekaClient
-@EnableConfigurationProperties(value = JwtConfiguration.class)
-@ComponentScan("academy.devdojo.youtube")
+@SpringBootApplication
 public class GatewayApplication {
 
 	public static void main(String[] args) {

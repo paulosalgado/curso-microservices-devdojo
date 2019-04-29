@@ -8,11 +8,11 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@SpringBootApplication
-@EntityScan({"academy.devdojo.youtube.core.model"})
 @EnableJpaRepositories({"academy.devdojo.youtube.core.repository"})
-@EnableConfigurationProperties(value = JwtConfiguration.class)
+@EntityScan({"academy.devdojo.youtube.core.model"})
 @ComponentScan("academy.devdojo.youtube")
+@EnableConfigurationProperties(value = JwtConfiguration.class)
+@SpringBootApplication
 public class CourseApplication {
 
     public static void main(String[] args) {

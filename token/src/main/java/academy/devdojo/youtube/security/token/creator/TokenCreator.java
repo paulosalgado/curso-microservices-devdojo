@@ -28,9 +28,9 @@ import static com.nimbusds.jose.EncryptionMethod.A128CBC_HS256;
 import static com.nimbusds.jose.JWEAlgorithm.DIR;
 import static java.util.stream.Collectors.toList;
 
-@Service
 @Slf4j
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
+@Service
 public class TokenCreator {
 
     private final JwtConfiguration jwtConfiguration;
@@ -68,7 +68,8 @@ public class TokenCreator {
         return signedJWT;
     }
 
-    private JWTClaimsSet createJWTClaimsSet(Authentication auth, ApplicationUser applicationUser) {
+    private JWTClaimsSet createJWTClaimsSet(Authentication auth,
+                                            ApplicationUser applicationUser) {
 
         log.info("Creating the JWTClaimsSet object for '{}'", applicationUser);
 
@@ -86,17 +87,6 @@ public class TokenCreator {
                 .issueTime(new Date())
                 .expirationTime(expirationTime)
                 .build();
-    }
-
-    @SneakyThrows
-    private KeyPair generateKeyPair() {
-
-        log.info("Generating RSA 2048 bits keys");
-
-        KeyPairGenerator generator = KeyPairGenerator.getInstance("RSA");
-        generator.initialize(2048);
-
-        return generator.genKeyPair();
     }
 
     public String encryptToken(SignedJWT signedJWT) throws JOSEException {
@@ -118,6 +108,17 @@ public class TokenCreator {
         log.info("Token encrypted");
 
         return jweObject.serialize();
+    }
+
+    @SneakyThrows
+    private KeyPair generateKeyPair() {
+
+        log.info("Generating RSA 2048 bits keys");
+
+        KeyPairGenerator generator = KeyPairGenerator.getInstance("RSA");
+        generator.initialize(2048);
+
+        return generator.genKeyPair();
     }
 
 }
