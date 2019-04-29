@@ -2,16 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16ce1dd7-ce62-44be-b113-002c178c01cf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/auth/src/main/java/academy/devdojo/youtube/auth/security/config/SecurityCredentialsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth/src/main/java/academy/devdojo/youtube/auth/security/filter/JwtUsernameAndPasswordAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth/src/main/java/academy/devdojo/youtube/auth/security/user/UserDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/academy/devdojo/youtube/core/model/ApplicationUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/academy/devdojo/youtube/core/property/JwtConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/academy/devdojo/youtube/core/repository/ApplicationUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/token/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/token/src/main/java/academy/devdojo/youtube/security/config/SecurityTokenConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/token/src/main/java/academy/devdojo/youtube/security/token/creator/TokenCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/token/token.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/academy/devdojo/youtube/auth/AuthApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/academy/devdojo/youtube/auth/AuthApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/academy/devdojo/youtube/auth/security/config/SecurityCredentialsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/academy/devdojo/youtube/auth/security/config/SecurityCredentialsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/academy/devdojo/youtube/auth/security/filter/JwtUsernameAndPasswordAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/academy/devdojo/youtube/auth/security/filter/JwtUsernameAndPasswordAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/test/java/academy/devdojo/youtube/auth/AuthApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/test/java/academy/devdojo/youtube/auth/AuthApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/academy/devdojo/youtube/core/model/ApplicationUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/academy/devdojo/youtube/core/model/ApplicationUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/course/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/course/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course/src/test/java/academy/devdojo/youtube/course/CourseApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/course/src/test/java/academy/devdojo/youtube/course/CourseApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery/src/test/java/academy/devdojo/youtube/discovery/DiscoveryApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/discovery/src/test/java/academy/devdojo/youtube/discovery/DiscoveryApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/test/java/academy/devdojo/youtube/gateway/GatewayApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/test/java/academy/devdojo/youtube/gateway/GatewayApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,6 +30,7 @@
     <ignored path="$PROJECT_DIR$/discovery/target/" />
     <ignored path="$PROJECT_DIR$/gateway/target/" />
     <ignored path="$PROJECT_DIR$/auth/target/" />
+    <ignored path="$PROJECT_DIR$/token/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,32 +98,33 @@
     <session id="1201262499">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.33" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.68" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="4" />
-          <entry key="Database Element" value="1" />
-          <entry key="JAVA" value="32" />
+          <entry key="CLASS" value="7" />
+          <entry key="Database Element" value="3" />
+          <entry key="JAVA" value="53" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="Properties" value="3" />
           <entry key="Scratch" value="1" />
-          <entry key="XML" value="28" />
-          <entry key="YAML" value="9" />
+          <entry key="XML" value="42" />
+          <entry key="YAML" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3906" />
+          <entry key="JAVA" value="4187" />
           <entry key="PLAIN_TEXT" value="9" />
-          <entry key="Scratch" value="36" />
-          <entry key="XML" value="391" />
-          <entry key="YAML" value="428" />
+          <entry key="Scratch" value="47" />
+          <entry key="XML" value="458" />
+          <entry key="YAML" value="441" />
         </counts>
       </usages-collector>
     </session>
@@ -122,25 +134,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/auth/src/main/java/academy/devdojo/youtube/auth/security/config/SecurityCredentialsConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2448#2449#0" expanded="true" />
-                <element signature="e#2498#2499#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/auth/src/test/java/academy/devdojo/youtube/auth/AuthApplicationTests.java">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/academy/devdojo/youtube/core/model/ApplicationUser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+            <state relative-caret-position="157">
+              <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -162,6 +160,7 @@
       <find>mysqlorg.postgresql</find>
       <find>rsa</find>
       <find>@Ignore</find>
+      <find>256</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -189,25 +188,31 @@
         <option value="$PROJECT_DIR$/discovery/src/main/java/academy/devdojo/youtube/discovery/DiscoveryApplication.java" />
         <option value="$PROJECT_DIR$/core/.gitignore" />
         <option value="$PROJECT_DIR$/course/.gitignore" />
-        <option value="$PROJECT_DIR$/course/pom.xml" />
         <option value="$PROJECT_DIR$/discovery/pom.xml" />
         <option value="$PROJECT_DIR$/gateway/pom.xml" />
         <option value="$PROJECT_DIR$/gateway/src/main/java/academy/devdojo/youtube/gateway/GatewayApplication.java" />
-        <option value="$PROJECT_DIR$/course/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/gateway/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/core/src/main/java/academy/devdojo/youtube/core/repository/ApplicationUserRepository.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/academy/devdojo/youtube/core/property/JwtConfiguration.java" />
-        <option value="$PROJECT_DIR$/auth/pom.xml" />
         <option value="$PROJECT_DIR$/course/src/main/java/academy/devdojo/youtube/course/CourseApplication.java" />
-        <option value="$PROJECT_DIR$/auth/src/main/java/academy/devdojo/youtube/auth/AuthApplication.java" />
         <option value="$PROJECT_DIR$/auth/src/main/java/academy/devdojo/youtube/auth/security/user/UserDetailsServiceImpl.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/core/src/main/java/academy/devdojo/youtube/core/model/ApplicationUser.java" />
-        <option value="$PROJECT_DIR$/auth/src/main/java/academy/devdojo/youtube/auth/security/filter/JwtUsernameAndPasswordAuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/auth/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/auth/src/main/java/academy/devdojo/youtube/auth/security/config/SecurityCredentialsConfig.java" />
+        <option value="$PROJECT_DIR$/auth/src/main/java/academy/devdojo/youtube/auth/security/filter/JwtUsernameAndPasswordAuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/auth/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/course/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/auth/src/main/java/academy/devdojo/youtube/auth/AuthApplication.java" />
+        <option value="$PROJECT_DIR$/auth/src/main/java/academy/devdojo/youtube/auth/security/config/SecurityCredentialsConfig.java" />
+        <option value="$PROJECT_DIR$/token/src/main/java/academy/devdojo/youtube/security/config/SecurityTokenConfig.java" />
+        <option value="$PROJECT_DIR$/token/src/main/java/academy/devdojo/youtube/security/token/creator/TokenCreator.java" />
+        <option value="$PROJECT_DIR$/course/src/test/java/academy/devdojo/youtube/course/CourseApplicationTests.java" />
+        <option value="$PROJECT_DIR$/discovery/src/test/java/academy/devdojo/youtube/discovery/DiscoveryApplicationTests.java" />
         <option value="$PROJECT_DIR$/auth/src/test/java/academy/devdojo/youtube/auth/AuthApplicationTests.java" />
+        <option value="$PROJECT_DIR$/gateway/src/test/java/academy/devdojo/youtube/gateway/GatewayApplicationTests.java" />
+        <option value="$PROJECT_DIR$/auth/pom.xml" />
+        <option value="$PROJECT_DIR$/course/pom.xml" />
+        <option value="$PROJECT_DIR$/token/pom.xml" />
+        <option value="$PROJECT_DIR$/core/src/main/java/academy/devdojo/youtube/core/model/ApplicationUser.java" />
       </list>
     </option>
   </component>
@@ -244,7 +249,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -252,110 +256,12 @@
               <item name="devdojo-microservices" type="b2602c69:ProjectViewProjectNode" />
               <item name="curso-microservices-devdojo" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="devdojo-microservices" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curso-microservices-devdojo" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="devdojo-microservices" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curso-microservices-devdojo" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="devdojo-microservices" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curso-microservices-devdojo" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="devdojo-microservices" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curso-microservices-devdojo" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="devdojo-microservices" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curso-microservices-devdojo" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="devdojo-microservices" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curso-microservices-devdojo" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="devdojo-microservices" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curso-microservices-devdojo" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="devdojo-microservices" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curso-microservices-devdojo" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="devdojo-microservices" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curso-microservices-devdojo" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="devdojo-microservices" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curso-microservices-devdojo" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="devdojo-microservices" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curso-microservices-devdojo" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="devdojo-microservices" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curso-microservices-devdojo" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -366,15 +272,19 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556311119840" />
-    <property name="database.console.LAST_STATE" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556556883018" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/gateway/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="academy.devdojo.youtube.security.config" />
       <recent name="academy.devdojo.youtube.core.repository" />
       <recent name="academy.devdojo.youtube.core.model" />
     </key>
@@ -395,21 +305,45 @@
         </RuleState>
       </list>
     </option>
-    <option name="contentProportion" value="0.23851733" />
+    <option name="contentProportion" value="0.24254633" />
   </component>
-  <component name="RunManager" selected="JUnit.AuthApplicationTests.test">
-    <configuration name="AuthApplicationTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="auth" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="academy.devdojo.youtube.auth.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="academy.devdojo.youtube.auth" />
-      <option name="MAIN_CLASS_NAME" value="academy.devdojo.youtube.auth.AuthApplicationTests" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
+  <component name="RunManager" selected="JUnit.All in token">
+    <configuration name="All in core" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="core" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in course" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="course" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in discovery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="discovery" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in gateway" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gateway" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in token" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="token" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -475,11 +409,19 @@
       <item itemvalue="Spring Boot.gateway" />
       <item itemvalue="Spring Boot.auth" />
       <item itemvalue="Spring Boot.course" />
-      <item itemvalue="JUnit.AuthApplicationTests.test" />
+      <item itemvalue="JUnit.All in core" />
+      <item itemvalue="JUnit.All in course" />
+      <item itemvalue="JUnit.All in discovery" />
+      <item itemvalue="JUnit.All in gateway" />
+      <item itemvalue="JUnit.All in token" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AuthApplicationTests.test" />
+        <item itemvalue="JUnit.All in token" />
+        <item itemvalue="JUnit.All in gateway" />
+        <item itemvalue="JUnit.All in discovery" />
+        <item itemvalue="JUnit.All in course" />
+        <item itemvalue="JUnit.All in core" />
       </list>
     </recent_temporary>
   </component>
@@ -497,7 +439,8 @@
       <option name="presentableId" value="Default" />
       <updated>1556289939009</updated>
       <workItem from="1556289940273" duration="1977000" />
-      <workItem from="1556292034633" duration="16701000" />
+      <workItem from="1556292034633" duration="17001000" />
+      <workItem from="1556545504615" duration="5552000" />
     </task>
     <servers />
   </component>
@@ -511,15 +454,30 @@
     <history-entry file="AuthApplicationTests_test - 2019.04.26 at 17h 30m 41s.xml">
       <configuration name="AuthApplicationTests.test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AuthApplicationTests_test - 2019.04.29 at 10h 47m 13s.xml">
+      <configuration name="AuthApplicationTests.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_auth - 2019.04.29 at 13h 50m 56s.xml">
+      <configuration name="All in auth" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_course - 2019.04.29 at 13h 51m 11s.xml">
+      <configuration name="All in course" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_discovery - 2019.04.29 at 13h 51m 16s.xml">
+      <configuration name="All in discovery" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_gateway - 2019.04.29 at 13h 51m 23s.xml">
+      <configuration name="All in gateway" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18678000" />
+    <option name="totallyTimeSpent" value="24530000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="51" y="25" width="1315" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2537431" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23798266" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -527,7 +485,7 @@
       <window_info id="Favorites" order="5" show_stripe_button="false" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Web" order="7" show_stripe_button="false" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" order="0" weight="0.32993197" />
+      <window_info anchor="bottom" id="Database Console" order="0" weight="0.22278911" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.32993197" />
@@ -538,23 +496,23 @@
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32993197" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32993197" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.32993197" />
       <window_info anchor="bottom" id="SonarLint" order="12" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32993197" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" />
-      <window_info anchor="bottom" id="Run Dashboard" order="16" visible="true" weight="0.4217687" />
-      <window_info anchor="right" id="Coverage" show_stripe_button="false" side_tool="true" weight="0.32939324" />
+      <window_info anchor="bottom" id="Run Dashboard" order="16" weight="0.34353742" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" show_stripe_button="false" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" weight="0.24349882" />
-      <window_info active="true" anchor="right" id="Database" order="6" visible="true" weight="0.23089047" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.25137904" />
+      <window_info anchor="right" id="Database" order="6" weight="0.23089047" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" show_stripe_button="false" />
+      <window_info anchor="right" id="Coverage" order="10" show_stripe_button="false" side_tool="true" weight="0.32939324" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,13 +526,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/discovery/src/main/java/academy/devdojo/youtube/discovery/DiscoveryApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -606,13 +557,6 @@
     <entry file="file://$PROJECT_DIR$/gateway/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/discovery/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/discovery/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -620,21 +564,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gateway/src/main/java/academy/devdojo/youtube/gateway/GatewayApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#261#262#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -682,13 +615,6 @@
     <entry file="file://$PROJECT_DIR$/course/stack.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/auth/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/course/src/main/java/academy/devdojo/youtube/course/CourseApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -696,17 +622,6 @@
           <folding>
             <element signature="e#524#525#0" expanded="true" />
             <element signature="e#592#593#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auth/src/main/java/academy/devdojo/youtube/auth/AuthApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#258#259#0" expanded="true" />
-            <element signature="e#324#325#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -763,23 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="33" column="37" lean-forward="true" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/academy/devdojo/youtube/core/model/ApplicationUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/nimbusds/nimbus-jose-jwt/7.0/nimbus-jose-jwt-7.0.jar!/com/nimbusds/jwt/JWTClaimsSet.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
@@ -804,70 +702,276 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/course/pom.xml">
+    <entry file="das://a5e93ee6-0f0a-4e92-8a7d-58bef083016b/database/devdojo/schema/public/table/application_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.4.RELEASE/spring-boot-autoconfigure-2.1.4.RELEASE.jar!/org/springframework/boot/autoconfigure/orm/jpa/JpaProperties.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        <state relative-caret-position="83">
+          <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+          <folding>
+            <element signature="e#995#996#0" expanded="true" />
+            <element signature="e#1039#1040#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/nimbusds/nimbus-jose-jwt/7.0/nimbus-jose-jwt-7.0.jar!/com/nimbusds/jose/JWSAlgorithm.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/nimbusds/nimbus-jose-jwt/7.0/nimbus-jose-jwt-7.0-sources.jar!/com/nimbusds/jose/JWSAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="82" column="37" selection-start-line="82" selection-start-column="37" selection-end-line="82" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/course/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course/src/test/java/academy/devdojo/youtube/course/CourseApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/discovery/src/test/java/academy/devdojo/youtube/discovery/DiscoveryApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auth/src/main/java/academy/devdojo/youtube/auth/security/filter/JwtUsernameAndPasswordAuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-810">
-          <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
+        <state relative-caret-position="375">
+          <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/auth/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="450">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/auth/src/main/java/academy/devdojo/youtube/auth/security/config/SecurityCredentialsConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+        <state relative-caret-position="267">
+          <caret line="35" column="19" lean-forward="true" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2448#2449#0" expanded="true" />
-            <element signature="e#2498#2499#0" expanded="true" />
+            <element signature="e#2489#2490#0" expanded="true" />
+            <element signature="e#2539#2540#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/src/main/java/academy/devdojo/youtube/auth/AuthApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#794#795#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/token/src/main/java/academy/devdojo/youtube/security/config/SecurityTokenConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/src/main/java/academy/devdojo/youtube/auth/security/filter/JwtUsernameAndPasswordAuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/token/src/main/java/academy/devdojo/youtube/security/token/creator/TokenCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course/src/test/java/academy/devdojo/youtube/course/CourseApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/discovery/src/test/java/academy/devdojo/youtube/discovery/DiscoveryApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/test/java/academy/devdojo/youtube/gateway/GatewayApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/auth/src/test/java/academy/devdojo/youtube/auth/AuthApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        <state relative-caret-position="375">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#526#527#0" expanded="true" />
+            <element signature="e#607#608#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="37" lean-forward="true" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/discovery/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/token/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/academy/devdojo/youtube/core/model/ApplicationUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>token</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
   <component name="mavenExecuteGoalHistory">
     <option value="" />

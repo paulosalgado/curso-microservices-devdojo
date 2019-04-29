@@ -20,6 +20,7 @@
     <modules>
         <module>course</module>
         <module>core</module>
+        <module>token</module>
     </modules>
 
     <properties>
