@@ -1,9 +1,12 @@
 package academy.devdojo.youtube.core.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
 
 @Entity
 @Getter
@@ -13,6 +16,7 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@JsonInclude(NON_NULL)
 public class ApplicationUser implements AbstractEntity {
 
     @Id

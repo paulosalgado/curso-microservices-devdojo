@@ -20,4 +20,10 @@ zuul:
   sensitive-headers: Cookie
 
 ribbon:
-  ReadTimeout: 5000
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+
+jwt:
+  config:
+    login-url: /auth/login
+    type: signed

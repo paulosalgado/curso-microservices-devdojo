@@ -81,6 +81,7 @@ public class TokenCreator {
         return new JWTClaimsSet.Builder()
                 .subject(applicationUser.getUsername())
                 .claim("authorities", authorities)
+                .claim("userId", applicationUser.getId())
                 .issuer("http://academy.devdojo")
                 .issueTime(new Date())
                 .expirationTime(expirationTime)
